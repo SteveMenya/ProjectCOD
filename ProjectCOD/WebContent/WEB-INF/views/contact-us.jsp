@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Home</title>
+<title>Contact Us</title>
 </head>
 <body>
- <%@ include file="navigation_bar.html" %>
+<%@ include file="navigation_bar.html" %>
+ 	<h1>Contact Us</h1>
 </body>
 </html>

@@ -9,8 +9,20 @@ public class HomeController {
 	public String showIndexPage() {
 		return "index";
 	}
-	@GetMapping("/about")
+	@GetMapping("/menu")
+	public String showMenu() {
+		return "menu";
+	}
+	@GetMapping("/merchandise")
 	public String showAboutPage() {
-		return "about";
+		return "merchandise";
+	}
+	@GetMapping("/contact-us")
+	public String showContactUsPage() {
+		return "contact-us";
+	}
+	@GetMapping("/sign-in")
+	public String showMerchandisePage() {
+		return "sign-in";
 	}
 }
