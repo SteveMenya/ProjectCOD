@@ -22,7 +22,19 @@ public class HomeController {
 		return "contact-us";
 	}
 	@GetMapping("/sign-in")
-	public String showMerchandisePage() {
+	public String showSignInPage() {
 		return "sign-in";
+	}
+	@GetMapping("/featured")
+	public String showFeaturedPage() {
+		return "featured";
+	}
+	@GetMapping("/colddrinks")
+	public String showColdDrinksPage() {
+		return "colddrinks";
+	}
+	@GetMapping("/hotdrinks")
+	public String showHotDrinksPage() {
+		return "hotdrinks";
 	}
 }

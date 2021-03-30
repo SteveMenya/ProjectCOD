@@ -5,12 +5,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Merchandise</title>
+<title>Featured</title>
 <spring:url value="/resources/css/nav.css" var="mainCss"/>
 	<link href="${mainCss}" rel="stylesheet" />
 </head>
 <body>
-<%@ include file="navigation_bar.html" %>
-	<h1>Merchandise</h1>
+	<h1>Featured Drinks</h1>
 </body>
 </html>
