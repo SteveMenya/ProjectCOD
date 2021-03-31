@@ -18,6 +18,17 @@ public class Item {
 	public Item() {
 		super();
 	}
+	
+	//constructor using fields 
+	public Item(int itemId, String itemName, int itemCost, String description, String size) {
+		super();
+		this.itemId = itemId;
+		this.itemName = itemName;
+		this.itemCost = itemCost;
+		this.description = description;
+		this.size = size;
+	}
+
 
 	public int getItemId() {
 		return itemId;

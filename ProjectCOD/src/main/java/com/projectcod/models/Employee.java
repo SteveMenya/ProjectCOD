@@ -18,6 +18,17 @@ public class Employee {
 	public Employee() {
 		super();
 	}
+	
+	//constructor using fields
+	public Employee(int employeeId, String firstName, String lastName, String phoneNumber, String password) {
+		super();
+		this.employeeId = employeeId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.phoneNumber = phoneNumber;
+		this.password = password;
+	}
+
 
 	public int getEmployeeId() {
 		return employeeId;

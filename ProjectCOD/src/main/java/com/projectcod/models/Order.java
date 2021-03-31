@@ -21,11 +21,22 @@ public class Order {
 	public Order() {
 		super();
 	}
-
+	//constructor using fields
+	public Order(int orderid, int customerid, int employeeid, int itemid, int billnumber, int quantity) {
+		super();
+		this.orderid = orderid;
+		this.customerid = customerid;
+		this.employeeid = employeeid;
+		this.itemid = itemid;
+		this.billnumber = billnumber;
+		this.quantity = quantity;
+	}
+	
+	
 	public int getOrderid() {
 		return orderid;
 	}
-
+	
 	public void setOrderid(int orderid) {
 		this.orderid = orderid;
 	}
