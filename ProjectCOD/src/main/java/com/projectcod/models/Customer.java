@@ -1,9 +1,22 @@
 package com.projectcod.models;
 
+
+
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
+
 
 @Entity
 @Table(name ="customers")
@@ -21,6 +34,10 @@ public class Customer {
 	@Column(length=50, nullable=false, name="password")
 	private String password;
 	
+	 @ManyToOne(fetch = FetchType.LAZY, optional = false)
+	 @JoinColumn(name = "customerid", nullable = false)
+	 @OnDelete(action = OnDeleteAction.CASCADE)
+	 private Order order;
 	
 	//default constructor
 	public Customer() {
