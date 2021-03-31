@@ -1,5 +1,6 @@
 package com.projectcod.models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -9,10 +10,15 @@ import javax.persistence.Table;
 public class Customer {
 	@Id
 	private int customerId;
+	@Column(length=50, nullable=false, name="firstname")
 	private String firstName;
+	@Column(length=50, nullable=false, name="lastname")
 	private String lastName;
+	@Column(length=50, nullable=false, name="email")
 	private String email;
+	@Column(length=50, nullable=false, name="phonenumber")
 	private String phoneNumber;
+	@Column(length=50, nullable=false, name="password")
 	private String password;
 	
 	

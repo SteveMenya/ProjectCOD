@@ -2,6 +2,7 @@ package com.projectcod.models;
 
 import java.sql.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -11,11 +12,17 @@ import javax.persistence.Table;
 public class Order {
 	@Id
 	private int orderid;
+	@Column(length=50, nullable=false, name="customerid")
 	private int customerid;
+	@Column(length=50, nullable=false, name="employeeid")
 	private int employeeid;
+	@Column(length=50, nullable=false, name="itemid")
 	private int itemid;
+	@Column(length=50, nullable=false, name="billnumber")
 	private int billnumber;
+	@Column(length=50, nullable=false, name="quantity")
 	private int quantity;
+	
 	
 	//default constructor
 	public Order() {

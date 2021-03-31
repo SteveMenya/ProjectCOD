@@ -1,5 +1,6 @@
 package com.projectcod.models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -9,9 +10,13 @@ import javax.persistence.Table;
 public class Employee {
 	@Id
 	private int employeeId;
+	@Column(length=50, nullable=false, name="firstname")
 	private String firstName;
+	@Column(length=50, nullable=false, name="lastname")
 	private String lastName;
+	@Column(length=50, nullable=false, name="phonenumber")
 	private String phoneNumber;
+	@Column(length=50, nullable=false, name="password")
 	private String password;
 	
 	//default Contstructor

@@ -1,5 +1,6 @@
 package com.projectcod.models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -9,9 +10,13 @@ import javax.persistence.Table;
 public class Item {
 	@Id
 	private int itemId;
+	@Column(length=25, nullable=false, name="itemname")
 	private String itemName;
+	@Column(length=25, nullable=false, name="itemcost")
 	private int itemCost;
+	@Column(length=25, nullable=false, name="description")
 	private String description;
+	@Column(length=10, nullable=false, name="size")
 	private String size;
 	
 	//default constructor
