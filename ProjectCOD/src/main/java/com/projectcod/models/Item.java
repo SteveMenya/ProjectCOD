@@ -6,80 +6,56 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "items")
+@Table(name ="items")
 public class Item {
-	@Id
-	private int itemId;
-	@Column(length=25, nullable=false, name="itemname")
-	private String itemName;
-	@Column(length=25, nullable=false, name="itemcost")
-	private int itemCost;
-	@Column(length=25, nullable=false, name="description")
-	private String description;
-	@Column(length=10, nullable=false, name="size")
-	private String size;
-	
-	//default constructor
-	public Item() {
-		super();
-	}
-	
-	//constructor using fields 
-	public Item(int itemId, String itemName, int itemCost, String description, String size) {
-		super();
-		this.itemId = itemId;
-		this.itemName = itemName;
-		this.itemCost = itemCost;
-		this.description = description;
-		this.size = size;
-	}
+		@Id
+		@Column(length=50, nullable=false, name="item_name")
+		private String itemName;
+		@Column(length=50, nullable=false, name="item_cost")
+		private String itemCost;
+		@Column(length=50, nullable=false, name="description")
+		private String description;
+		
+		public Item() {
+			super();
+		}
 
+		public Item(String itemName, String itemCost, String description) {
+			super();
+			this.itemName = itemName;
+			this.itemCost = itemCost;
+			this.description = description;
+		}
 
-	public int getItemId() {
-		return itemId;
-	}
+		public String getItemName() {
+			return itemName;
+		}
 
-	public void setItemId(int itemId) {
-		this.itemId = itemId;
-	}
+		public void setItemName(String itemName) {
+			this.itemName = itemName;
+		}
 
-	public String getItemName() {
-		return itemName;
-	}
+		public String getItemCost() {
+			return itemCost;
+		}
 
-	public void setItemName(String itemName) {
-		this.itemName = itemName;
-	}
+		public void setItemCost(String itemCost) {
+			this.itemCost = itemCost;
+		}
 
-	public int getItemCost() {
-		return itemCost;
-	}
+		public String getDescription() {
+			return description;
+		}
 
-	public void setItemCost(int itemCost) {
-		this.itemCost = itemCost;
-	}
+		public void setDescription(String description) {
+			this.description = description;
+		}
 
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public String getSize() {
-		return size;
-	}
-
-	public void setSize(String size) {
-		this.size = size;
-	}
-
-	@Override
-	public String toString() {
-		return "Item [itemId=" + itemId + ", itemName=" + itemName + ", itemCost=" + itemCost + ", description="
-				+ description + ", size=" + size + "]";
-	}
-	
-	
+		@Override
+		public String toString() {
+			return "Item [itemName=" + itemName + ", itemCost=" + itemCost + ", description=" + description + "]";
+		}
+		
+		
+		
 }

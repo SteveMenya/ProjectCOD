@@ -1,100 +1,96 @@
 package com.projectcod.models;
 
-import java.sql.Date;
+import java.util.List;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "orders")
 public class Order {
-	@Id
-	private int orderid;
-	@Column(length=50, nullable=false, name="customerid")
-	private int customerid;
-	@Column(length=50, nullable=false, name="employeeid")
-	private int employeeid;
-	@Column(length=50, nullable=false, name="itemid")
-	private int itemid;
-	@Column(length=50, nullable=false, name="billnumber")
-	private int billnumber;
-	@Column(length=50, nullable=false, name="quantity")
-	private int quantity;
-	
-	
-	//default constructor
-	public Order() {
-		super();
-	}
-	//constructor using fields
-	public Order(int orderid, int customerid, int employeeid, int itemid, int billnumber, int quantity) {
-		super();
-		this.orderid = orderid;
-		this.customerid = customerid;
-		this.employeeid = employeeid;
-		this.itemid = itemid;
-		this.billnumber = billnumber;
-		this.quantity = quantity;
-	}
-	
-	
-	public int getOrderid() {
-		return orderid;
-	}
-	
-	public void setOrderid(int orderid) {
-		this.orderid = orderid;
-	}
+		@Id
+		private int orderId;
+		private String customerEmail;
+		private String itemName;
+		private int quantity;
+		private int total;
+		
+		@OneToMany(targetEntity = Customer.class,fetch= FetchType.EAGER)
+		private List<Order> cOrder;
+		
+		
 
-	public int getCustomerid() {
-		return customerid;
-	}
+		public Order(int orderId, String customerEmail, String itemName, int quantity, int total, List<Order> cOrder) {
+			super();
+			this.orderId = orderId;
+			this.customerEmail = customerEmail;
+			this.itemName = itemName;
+			this.quantity = quantity;
+			this.total = total;
+			this.cOrder = cOrder;
+		}
 
-	public void setCustomerid(int customerid) {
-		this.customerid = customerid;
-	}
+		public Order() {
+			super();
+		}
 
-	public int getEmployeeid() {
-		return employeeid;
-	}
+		public int getOrderId() {
+			return orderId;
+		}
 
-	public void setEmployeeid(int employeeid) {
-		this.employeeid = employeeid;
-	}
+		public void setOrderId(int orderId) {
+			this.orderId = orderId;
+		}
 
-	public int getItemid() {
-		return itemid;
-	}
+		public String getCustomerEmail() {
+			return customerEmail;
+		}
 
-	public void setItemid(int itemid) {
-		this.itemid = itemid;
-	}
+		public void setCustomerEmail(String customerEmail) {
+			this.customerEmail = customerEmail;
+		}
 
-	public int getBillnumber() {
-		return billnumber;
-	}
+		public String getItemName() {
+			return itemName;
+		}
 
-	public void setBillnumber(int billnumber) {
-		this.billnumber = billnumber;
-	}
+		public void setItemName(String itemName) {
+			this.itemName = itemName;
+		}
 
-	public int getQuantity() {
-		return quantity;
-	}
+		public int getQuantity() {
+			return quantity;
+		}
 
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
+		public void setQuantity(int quantity) {
+			this.quantity = quantity;
+		}
 
-	@Override
-	public String toString() {
-		return "Order [orderid=" + orderid + ", customerid=" + customerid + ", itemid=" + itemid + ", billnumber="
-				+ billnumber + ", quantity=" + quantity + "]";
-	}
+		public int getTotal() {
+			return total;
+		}
 
-	
-	
-	
+		public void setTotal(int total) {
+			this.total = total;
+		}
+
+		public List<Order> getcOrder() {
+			return cOrder;
+		}
+
+		public void setcOrder(List<Order> cOrder) {
+			this.cOrder = cOrder;
+		}
+
+		@Override
+		public String toString() {
+			return "Order [orderId=" + orderId + ", customerEmail=" + customerEmail + ", itemName=" + itemName
+					+ ", quantity=" + quantity + ", total=" + total + ", cOrder=" + cOrder + "]";
+		}
+		
+		
+		
 }
