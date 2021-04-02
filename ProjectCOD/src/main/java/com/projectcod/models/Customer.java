@@ -10,7 +10,7 @@ import javax.persistence.Table;
 public class Customer {
 	
 		@Id
-		@Column(length=50, nullable=false, name="email")
+		@Column(length=50, nullable=false, name="email", unique=true)
 		private String email;
 		@Column(length=50, nullable=false, name="first_name")
 		private String firstName;

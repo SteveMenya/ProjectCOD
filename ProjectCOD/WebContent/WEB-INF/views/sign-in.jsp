@@ -5,15 +5,16 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Login Page</title>
+<title>Customer Page</title>
 </head>
 <body>
-	<h1>Login Page</h1>
+	
+	<h1>Log-In Page</h1>
 	<h3>${LoginFailedMessage}</h3>
 	<form action="./sign-in" method="post">
 		<div>
-			<label>Username</label>
-			<input type="text" name="username" />
+			<label>Email</label>
+			<input type="text" name="email" />
 		</div>
 		<div>
 			<label>Password</label>
@@ -23,5 +24,7 @@
 			<input type="submit" value="Login" />
 		</div>
 	</form>
+	
+	<div> <a href= "/projectcod/register">Customer Registration</a></div>
 </body>
 </html>
