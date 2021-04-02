@@ -1,18 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+    <!-- Tag Library -->
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Sign-in</title>
-<spring:url value="/resources/css/nav.css" var="mainCss"/>
-	<link href="${mainCss}" rel="stylesheet" />
+<title>Login Page</title>
 </head>
 <body>
-<%@ include file="navigation_bar.html" %>
-	<!--  -->
-	<form action="./login" method="post">
+	<h1>Login Page</h1>
+	<h3>${LoginFailedMessage}</h3>
+	<form action="./sign-in" method="post">
 		<div>
 			<label>Username</label>
 			<input type="text" name="username" />
