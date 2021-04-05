@@ -10,6 +10,7 @@
 	<link href="${mainCss}" rel="stylesheet" />
 </head>
 <body>
+ <%@ include file="navigation_bar.html" %>
 	<h1>Hot Drinks</h1>
 </body>
 </html>

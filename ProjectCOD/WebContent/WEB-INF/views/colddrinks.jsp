@@ -10,6 +10,7 @@
 <spring:url value="/resources/css/nav.css" var="mainCss"/>
 	<link href="${mainCss}" rel="stylesheet" />
 <body>
+ <%@ include file="navigation_bar.html" %>
 	<h1>Cold Drinks</h1>
 </body>
 </html>

@@ -85,10 +85,13 @@ public class HomeController {
 	public String showWelcomePage() {
 		return "welcome";
 	}
-	@GetMapping("/featured")
-	public String showFeaturedPage() {
-		return "featured";
-	}
+	
+	//@GetMapping("/featured")
+	//public String showFeaturedPage() {
+	//	
+	//	return "featured";
+	//}
+	
 	@GetMapping("/colddrinks")
 	public String showColdDrinksPage() {
 		return "colddrinks";
@@ -98,12 +101,12 @@ public class HomeController {
 		return "hotdrinks";
 	}
 	
-	@GetMapping("/saveHardCodedCustomer") 
-	public String saveHardCodedCustomer() {
-	Customer customer = new Customer("testUser1@gmail.com", "Lawrence", "Palacios","952145354", "password12");
-	System.out.println(customer);
-	customerService.saveCustomer(customer);
-	return "welcome";
-}
+//	@GetMapping("/saveHardCodedCustomer") 
+//	public String saveHardCodedCustomer() {
+//	Customer customer = new Customer("testUser1@gmail.com", "Lawrence", "Palacios","952145354", "password12");
+//	System.out.println(customer);
+//	customerService.saveCustomer(customer);
+//	return "welcome";
+//}
 	
 }

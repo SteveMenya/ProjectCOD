@@ -14,7 +14,23 @@
 <%@ include file="navigation_bar.html" %>
  	<h1>Contact Us</h1>
  	<form:form action="./contact-us" method="post" modelAttribute="user">
-		<div>
+ 	
+ 	    <div class="contact-title">
+        <h1>Coffee On Mission</h1>
+        <h2>We are happy to serve you</h2>
+
+    </div class="contact-form">
+        <form id="contact-form" method="post" action="">
+                <input name="name" type="text" class="form-control" placeholder="Your Name" required><br>
+                <input name="email" type="email" class="form-control" placeholder="Your Email" required><br>
+                <textarea name="message" class="form-control" placeholder="Message" rows="4" required></textarea><br>
+                <input type="submit" class="form-control submit" value="SEND MESSAGE">
+        </form>
+
+    <div>
+
+    </div>
+	<%-- 	<div>
 			<label>Name: </label>
 			<form:input path="username" /><br>
 			<p><form:errors path="username"/></p>
@@ -36,7 +52,7 @@
 		</div>
 		<div>
 			<input type="submit" value="Register" />
-		</div>
+		</div> --%>
 	
 	
 	</form:form>
