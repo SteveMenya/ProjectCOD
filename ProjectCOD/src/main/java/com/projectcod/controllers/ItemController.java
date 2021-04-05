@@ -18,23 +18,40 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.projectcod.models.Customer;
 import com.projectcod.models.Item;
+import com.projectcod.service.ColdItemService;
+import com.projectcod.service.HotItemService;
 import com.projectcod.service.ItemService;
 
 @Controller
 public class ItemController {
-	//old-private ItemService itemService;
 	
 	private ItemService itemService;
+	private HotItemService hotItemService;
+	private ColdItemService coldItemService;
 	
 	@Autowired
-	public ItemController(ItemService itemService) {
+	public ItemController(ItemService itemService, HotItemService hotItemService, ColdItemService coldItemService) {
 		this.itemService= itemService;
-	}
+		this.hotItemService= hotItemService;
+		this.coldItemService= coldItemService;
+	}	
 	
 	@GetMapping("featured")
-	public String index(ModelMap modelMap) {
+	public String featured(ModelMap modelMap) {
 		modelMap.put("items", itemService.findAll());
 		return "featured";
+	}
+	
+	@GetMapping("hotdrinks")
+	public String hotDrinks(ModelMap modelMap) {
+		modelMap.put("items", hotItemService.findAll());
+		return "hotdrinks";
+	}
+	
+	@GetMapping("colddrinks")
+	public String coldDrinks(ModelMap modelMap) {
+		modelMap.put("items", coldItemService.findAll());
+		return "colddrinks";
 	}
 	//@Autowired
 	//public ItemController(ItemService itemService) {

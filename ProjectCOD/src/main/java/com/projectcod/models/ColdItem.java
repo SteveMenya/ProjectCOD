@@ -6,8 +6,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name ="hot_items")
-public class HotItems {
+@Table(name ="cold_items")
+public class ColdItem {
 		@Id
 		@Column(length=50, nullable=false, name="item_name")
 		private String itemName;
@@ -18,11 +18,11 @@ public class HotItems {
 		@Column(length=250, nullable=false, name="item_url")
 		private String itemUrl;
 		
-		public HotItems() {
+		public ColdItem() {
 			super();
 		}
 
-		public HotItems(String itemName, String itemCost, String description, String itemUrl) {
+		public ColdItem(String itemName, String itemCost, String description, String itemUrl) {
 			super();
 			this.itemName = itemName;
 			this.itemCost = itemCost;
@@ -61,12 +61,8 @@ public class HotItems {
 		public void setItemUrl(String itemUrl) {
 			this.itemUrl = itemUrl;
 		}
-
-		@Override
-		public String toString() {
-			return "HotItems [itemName=" + itemName + ", itemCost=" + itemCost + ", description=" + description
-					+ ", itemUrl=" + itemUrl + "]";
-		}
+		
 		
 }
-		
+
+

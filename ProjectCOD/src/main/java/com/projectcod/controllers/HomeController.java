@@ -92,15 +92,6 @@ public class HomeController {
 	//	return "featured";
 	//}
 	
-	@GetMapping("/colddrinks")
-	public String showColdDrinksPage() {
-		return "colddrinks";
-	}
-	@GetMapping("/hotdrinks")
-	public String showHotDrinksPage() {
-		return "hotdrinks";
-	}
-	
 //	@GetMapping("/saveHardCodedCustomer") 
 //	public String saveHardCodedCustomer() {
 //	Customer customer = new Customer("testUser1@gmail.com", "Lawrence", "Palacios","952145354", "password12");

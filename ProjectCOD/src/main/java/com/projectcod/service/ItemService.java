@@ -1,6 +1,6 @@
 package com.projectcod.service;
 
-import java.util.List;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,9 +27,5 @@ public class ItemService {
 		}
 		public Iterable<Item> findAll() {
 			return itemRepository.findAll();
-		}
-		//public List<Item> findAll() { 
-		//	return itemRepository.findAll();
-		//}
-		
+		}			
 }
