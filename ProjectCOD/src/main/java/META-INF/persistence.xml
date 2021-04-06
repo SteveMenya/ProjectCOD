@@ -6,6 +6,7 @@
 		<class>com.projectcod.models.Order</class>
 		<class>com.projectcod.models.HotItem</class>
 		<class>com.projectcod.models.ColdItem</class>
+		<class>com.projectcod.models.CustomerFeedBack</class>
 		<!-- <class>com.projectcod.models.Employee</class> -->
 		<properties>
 			<property name="javax.persistence.jdbc.url"
@@ -17,7 +18,7 @@
 				value="com.mysql.jdbc.Driver" />
 			<property
 				name="javax.persistence.schema-generation.database.action"
-				value="none" />
+				value="create" />
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="true" />
 			<property name="hibernate.archive.autodetection" value="class, hbm"/>

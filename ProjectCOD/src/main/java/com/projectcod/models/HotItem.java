@@ -9,13 +9,13 @@ import javax.persistence.Table;
 @Table(name ="hot_items")
 public class HotItem {
 		@Id
-		@Column(length=50, nullable=false, name="item_name")
+		@Column(length=500, nullable=false, name="item_name")
 		private String itemName;
-		@Column(length=50, nullable=false, name="item_cost")
+		@Column(length=500, nullable=false, name="item_cost")
 		private String itemCost;
-		@Column(length=50, nullable=false, name="description")
+		@Column(length=500, nullable=false, name="description")
 		private String description;
-		@Column(length=250, nullable=false, name="item_url")
+		@Column(length=500, nullable=false, name="item_url")
 		private String itemUrl;
 		
 		public HotItem() {

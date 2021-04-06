@@ -8,8 +8,12 @@
 <title>Home</title>
 <spring:url value="/resources/css/nav.css" var="mainCss"/>
 	<link href="${mainCss}" rel="stylesheet" />
+	
+<spring:url value="/resources/css/main.css" var="mainCss"/>
+	<link href="${mainCss}" rel="stylesheet" />
 </head>
 <body>
  <%@ include file="navigation_bar.html" %>
+ 
 </body>
 </html>

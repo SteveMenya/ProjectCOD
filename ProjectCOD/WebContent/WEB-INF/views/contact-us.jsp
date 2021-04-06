@@ -13,48 +13,34 @@
 <body>
 <%@ include file="navigation_bar.html" %>
  	<h1>Contact Us</h1>
- 	<form:form action="./contact-us" method="post" modelAttribute="user">
- 	
- 	    <div class="contact-title">
-        <h1>Coffee On Mission</h1>
-        <h2>We are happy to serve you</h2>
-
-    </div class="contact-form">
-        <form id="contact-form" method="post" action="">
-                <input name="name" type="text" class="form-control" placeholder="Your Name" required><br>
-                <input name="email" type="email" class="form-control" placeholder="Your Email" required><br>
-                <textarea name="message" class="form-control" placeholder="Message" rows="4" required></textarea><br>
-                <input type="submit" class="form-control submit" value="SEND MESSAGE">
-        </form>
-
-    <div>
-
-    </div>
-	<%-- 	<div>
-			<label>Name: </label>
-			<form:input path="username" /><br>
-			<p><form:errors path="username"/></p>
+<form:form action="./contact-us" method="post" modelAttribute="feedback">
+		<div>
+			<label>First Name: </label>
+			<form:input path="firstName" /><br>
+			<p><form:errors path="firstName" /></p>
 		</div>
 		<div>
+		<div>
+			<label>Last Name: </label>
+			<form:input path="lastName" /><br>
+			<p><form:errors path="lastName" /></p>
+		</div>
 			<label>Email: </label>
 			<form:input path="email" /><br>
-			<p><form:errors path="email" /></p>
+			<p><form:errors path="email"/></p>
 		</div>
-		<div>
-			<label>Subject </label>
-			<form:input path="password" /><br>
-			<p><form:errors path="password" /></p>
-		</div>
+		
 		<div>
 			<label>Message </label>
-			<form:input path="password" /><br>
-			<p><form:errors path="password" /></p>
+			<form:input path="Message" /><br>
+			<p><form:errors path="Message" /></p>
 		</div>
 		<div>
-			<input type="submit" value="Register" />
-		</div> --%>
+			<input type="submit" value="Submit" />
+		</div>
 	
 	
 	</form:form>
+
 </body>
 </html>

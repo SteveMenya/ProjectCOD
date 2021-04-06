@@ -1,5 +1,5 @@
 package com.projectcod.service;
 
-public class Order {
+public class OrderService {
 
 }

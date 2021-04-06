@@ -2,95 +2,126 @@ package com.projectcod.models;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+
+
 
 @Entity
 @Table(name = "orders")
 public class Order {
 		@Id
+		@GeneratedValue(strategy = GenerationType.AUTO)
+		@Column(length=50, nullable=false, name="order_id")
 		private int orderId;
-		private String customerEmail;
-		private String itemName;
+		@ManyToOne(fetch = FetchType.LAZY)
+		@JoinColumn(name = "customer_email", nullable = false)
+		private Customer customer;	
+		@Column(length=50, nullable=false, name="quantity")
 		private int quantity;
+		@Column(length=50, nullable=false, name="total")
 		private int total;
 		
-		@OneToMany(targetEntity = Customer.class,fetch= FetchType.EAGER)
-		private List<Order> cOrder;
-		
-		
 
-		public Order(int orderId, String customerEmail, String itemName, int quantity, int total, List<Order> cOrder) {
-			super();
-			this.orderId = orderId;
-			this.customerEmail = customerEmail;
-			this.itemName = itemName;
-			this.quantity = quantity;
-			this.total = total;
-			this.cOrder = cOrder;
-		}
-
+		 @OneToMany(cascade = CascadeType.ALL,
+		            fetch = FetchType.LAZY,
+		            mappedBy = "order")
+		 
+		 private List<Item> items;
+		
 		public Order() {
 			super();
+			// TODO Auto-generated constructor stub
 		}
+
+		
+
+		public Order(int orderId, Customer customer, int quantity, int total, List<Item> items) {
+			super();
+			this.orderId = orderId;
+			this.customer = customer;
+			this.quantity = quantity;
+			this.total = total;
+			this.items = items;
+		}
+
+
 
 		public int getOrderId() {
 			return orderId;
 		}
 
+
 		public void setOrderId(int orderId) {
 			this.orderId = orderId;
 		}
 
-		public String getCustomerEmail() {
-			return customerEmail;
+		
+
+
+		public Customer getCustomer() {
+			return customer;
 		}
 
-		public void setCustomerEmail(String customerEmail) {
-			this.customerEmail = customerEmail;
+
+
+		public void setCustomer(Customer customer) {
+			this.customer = customer;
 		}
 
-		public String getItemName() {
-			return itemName;
-		}
 
-		public void setItemName(String itemName) {
-			this.itemName = itemName;
-		}
 
 		public int getQuantity() {
 			return quantity;
 		}
 
+
 		public void setQuantity(int quantity) {
 			this.quantity = quantity;
 		}
+
 
 		public int getTotal() {
 			return total;
 		}
 
+
 		public void setTotal(int total) {
 			this.total = total;
 		}
 
-		public List<Order> getcOrder() {
-			return cOrder;
+
+		public List<Item> getItems() {
+			return items;
 		}
 
-		public void setcOrder(List<Order> cOrder) {
-			this.cOrder = cOrder;
+
+		public void setItems(List<Item> items) {
+			this.items = items;
 		}
+
+
 
 		@Override
 		public String toString() {
-			return "Order [orderId=" + orderId + ", customerEmail=" + customerEmail + ", itemName=" + itemName
-					+ ", quantity=" + quantity + ", total=" + total + ", cOrder=" + cOrder + "]";
+			return "Order [orderId=" + orderId + ", customer=" + customer + ", quantity=" + quantity + ", total="
+					+ total + ", items=" + items + "]";
 		}
+
 		
+			
 		
+
+
 		
 }

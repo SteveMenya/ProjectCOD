@@ -13,7 +13,6 @@
 <body>
  <%@ include file="navigation_bar.html" %>
 	<h1>Featured Drinks</h1>
-	<h1>Hi jc  ${currentItem.itemName }</h1>
 	
 	<table>
 		<c:forEach var="item" items="${items}">

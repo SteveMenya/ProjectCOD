@@ -37,10 +37,11 @@ public class HomeController {
 	public String showAboutPage() {
 		return "merchandise";
 	}
-	@GetMapping("/contact-us")
-	public String showContactUsPage() {
-		return "contact-us";
-	}
+
+	/*
+	 * @GetMapping("/contact-us") public String showContactUsPage() { return
+	 * "contact-us"; }
+	 */
 	@GetMapping("/sign-in")
 	public String showSignInPage() {
 		return "sign-in";
@@ -85,19 +86,5 @@ public class HomeController {
 	public String showWelcomePage() {
 		return "welcome";
 	}
-	
-	//@GetMapping("/featured")
-	//public String showFeaturedPage() {
-	//	
-	//	return "featured";
-	//}
-	
-//	@GetMapping("/saveHardCodedCustomer") 
-//	public String saveHardCodedCustomer() {
-//	Customer customer = new Customer("testUser1@gmail.com", "Lawrence", "Palacios","952145354", "password12");
-//	System.out.println(customer);
-//	customerService.saveCustomer(customer);
-//	return "welcome";
-//}
-	
+
 }
