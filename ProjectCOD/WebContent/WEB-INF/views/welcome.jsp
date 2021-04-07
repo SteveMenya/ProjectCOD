@@ -14,9 +14,10 @@
 <body>
 <%@ include file="navigation_bar.html" %>
 		<h1>Welcome ${currentCustomer.firstName} Please place an Order</h1>
+		<h1>customer order ${currentCustomer.cOrder}</h1>
 		
 	<h1>Customer Registration</h1>
-	<form:form action="./register" method="post" modelAttribute="customer">
+ 	<%-- <form:form action="./welcome" method="post" modelAttribute="customer">
 		<div>
 			<label>Email: </label>
 			<form:input path="email" /><br>
@@ -47,7 +48,7 @@
 		</div>
 	
 	
-	</form:form>
+	</form:form>  --%>
 		
 </body>
 </html>

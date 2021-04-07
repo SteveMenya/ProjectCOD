@@ -72,8 +72,9 @@ public class HomeController {
 		
 		if(customer != null && password.equals(customer.getPassword())) {
 			session.setAttribute("currentCustomer", customer); //dispays username
-			//System.out.println("Login succeeded");
-			return "welcome";		
+			 //session.setAttribute("currentCustomer", customer.displayCustomerOrders());
+			return "welcome";	
+			
 		}
 		else {
 			model.addAttribute("LoginFailedMessage", "Login Invalid");

@@ -5,6 +5,35 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Home Page</h1>
+	<!--Images to show on main page-->
+    <section>
+        <img class="myPhotos" src="resources/images/cafefront.jpg" style="width: 100%" alt="cafefront">
+        <img class="myPhotos" src="resources/images/coffeecup.jpg" style="width: 100%" alt="coffecup">
+        <img class="myPhotos" src="resources/images/coffeshot.jpg" style="width: 100%" alt="coffeeshot">
+        <img class="myPhotos" src="resources/images/tomcoffe.jpg" style="width: 100%" alt="tomcoffee">
+    </section>
+    
+    <script type="text/javascript">
+ // Automatic Slideshow - change image every 3 seconds
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("myPhotos");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 3000);
+    }
+  
+    </script>
+    
+    
+    
+    
 </body>
 </html>

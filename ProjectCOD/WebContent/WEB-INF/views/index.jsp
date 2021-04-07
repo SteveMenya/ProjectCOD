@@ -14,6 +14,7 @@
 </head>
 <body>
  <%@ include file="navigation_bar.html" %>
+  <%@ include file="index.html" %>
  
 </body>
 </html>

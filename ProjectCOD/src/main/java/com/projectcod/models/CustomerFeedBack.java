@@ -2,17 +2,22 @@ package com.projectcod.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name ="customer_feedback")
 public class CustomerFeedBack {
+		@Id
+		@GeneratedValue(strategy = GenerationType.IDENTITY)
+		@Column(length=50, nullable=false, name="id")
+		private Long id;
 		@Column(length=50, nullable=false, name="first_name")
 		private String firstName;
 		@Column(length=50, nullable=false, name="last_name")
 		private String lastName;
-		@Id
 		@Column(length=100, nullable=false, name="email")
 		private String email;
 		@Column(length=500, nullable=false, name="message")

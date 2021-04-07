@@ -24,7 +24,7 @@ public class Order {
 		@GeneratedValue(strategy = GenerationType.AUTO)
 		@Column(length=50, nullable=false, name="order_id")
 		private int orderId;
-		@ManyToOne(fetch = FetchType.LAZY)
+		@ManyToOne(fetch = FetchType.EAGER)
 		@JoinColumn(name = "customer_email", nullable = false)
 		private Customer customer;	
 		@Column(length=50, nullable=false, name="quantity")

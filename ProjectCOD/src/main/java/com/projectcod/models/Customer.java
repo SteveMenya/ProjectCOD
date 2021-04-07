@@ -1,5 +1,6 @@
 package com.projectcod.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -28,9 +29,9 @@ public class Customer {
 		private String password;
 		
 		@OneToMany(cascade = CascadeType.ALL,
-	            fetch = FetchType.LAZY,
+	            fetch = FetchType.EAGER,
 	            mappedBy = "customer")	
-		private List<Order> cOrder;
+		private List<Order> cOrder=new ArrayList<Order>();
 		
 		public Customer() {
 			super();
@@ -123,6 +124,13 @@ public class Customer {
 		public void setcOrder(List<Order> cOrder) {
 			this.cOrder = cOrder;
 		}
+		
+		/*
+		 * public Order displayCustomerOrders() { for(Order order: this.cOrder) return
+		 * order;
+		 * 
+		 * }
+		 */
 
 
 
