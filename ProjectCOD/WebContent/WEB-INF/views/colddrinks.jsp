@@ -1,33 +1,33 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+     <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
      <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Cold</title>
-</head>
-<spring:url value="/resources/css/nav.css" var="mainCss"/>
+	<meta charset="ISO-8859-1">
+	<title>Frozen</title>
+	<spring:url value="/resources/css/nav.css" var="mainCss"/>
 	<link href="${mainCss}" rel="stylesheet" />
+	<spring:url value="/resources/css/items.css" var="mainCss"/>
+	<link href="${mainCss}" rel="stylesheet" />
+</head>
+
 <body>
- <%@ include file="navigation_bar.html" %>
-	<h1>Cold Drinks</h1>
-	<table>
+    <%@ include file="navigation_bar.html" %>
+ 	<div class="container">
 		<c:forEach var="item" items="${items}">
-			<tr>
-				<td> ${item.itemName }</td>
-				<td> ${item.itemCost }</td>
-				 <td> ${item.description}</td>
-				 <td> <img alt="drinks" src=${item.itemUrl} style="width: 400px; height: 300px;"></td>
-				 <%-- <td> <a href="<img src="${pageContext.request.contextPath}${item.itemUrl}" width="100px" height="100px"/>"></a> --%>
-				<%--  <td> ${item.itemUrl}</td>	 --%>
-					
-			</tr>
-			<%-- <img src="<c:url value="${item.itemUrl}"/>"/> --%>
-			<%-- <img src="${pageContext.request.contextPath}${item.itemUrl}" width="100px" height="100px"/> --%>
+		<div class="wrapper"> 	
+			<div class="products">
+				<div class= "item-image"> <img alt="drinks" src=${item.itemUrl} ></div>
+				<ul class= "item-info">		
+					<li><h3>${item.itemName}</h3></li>
+					<li><strong>${item.itemCost}</strong></li>
+					<li><p>${item.description}</p></li>
+				</ul>							
+			</div>
+		</div>
 		</c:forEach>
-		
-	</table>
+	</div>		
 </body>
 </html>

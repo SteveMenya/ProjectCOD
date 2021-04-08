@@ -13,10 +13,10 @@
 </head>
 <body>
 <%@ include file="navigation_bar.html" %>
-		<h1>Welcome ${currentCustomer.firstName} Please place an Order</h1>
+		<h1>Welcome ${currentCustomer.firstName}</h1>
 		
 		
-	<h1>Customer Registration</h1>
+	<h1>Place Order here</h1>
  	<%-- <form:form action="./welcome" method="post" modelAttribute="customer">
 		<div>
 			<label>Email: </label>

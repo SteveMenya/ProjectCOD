@@ -1,4 +1,7 @@
-@charset "ISO-8859-1";
+* {
+	box-sizing: border-box;
+}
+
 body {
 	background-color: grey;
 	}
@@ -18,6 +21,10 @@ body {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+}
+
+login-container {
+ float: right;
 }
 
 /* The dropdown container */
