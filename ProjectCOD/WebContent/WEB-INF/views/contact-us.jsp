@@ -7,18 +7,19 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Contact Us</title>
-<spring:url value="/resources/css/nav.css" var="mainCss"/>
+	<spring:url value="/resources/css/nav.css" var="mainCss"/>
 	<link href="${mainCss}" rel="stylesheet" />
-	
-<spring:url value="/resources/css/contactus.css" var="mainCss"/>
+	<spring:url value="/resources/css/contactus.css" var="mainCss"/>
+	<link href="${mainCss}" rel="stylesheet" />	
+	<spring:url value="/resources/css/register.css" var="mainCss"/>
 	<link href="${mainCss}" rel="stylesheet" />
-	
-<spring:url value="/resources/css/register.css" var="mainCss"/>
+	<spring:url value="/resources/css/footer.css" var="mainCss"/>
 	<link href="${mainCss}" rel="stylesheet" />
 </head>
 <body>
 	<!-- This tag includes the navigation bar on contact-us page -->
 <%@ include file="navigation_bar.html" %>
+	
 
 	<div class= "container">
 		<div style= "text-align:center">
@@ -71,6 +72,6 @@
  
  	</div>
 
-
+<footer><%@ include file="footer.html" %></footer>
 </body>
 </html>
