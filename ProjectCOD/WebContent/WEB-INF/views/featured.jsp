@@ -18,7 +18,7 @@
 			<c:forEach var="item" items="${items}">
 				<div class="wrapper"> 
 					<div class="products">
-						<div class= "item-image"> <img alt="drinks" src=${item.itemUrl} ></div>
+					<div class= "item-image"> <img alt="drinks" src=${item.itemUrl} ></div> 
 					<ul class= "item-info">
 						<li><h3>${item.itemName}</h3></li>
 						<li><strong>${item.itemCost}</strong></li>
