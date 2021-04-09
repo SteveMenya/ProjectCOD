@@ -2,13 +2,19 @@ package com.projectcod.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name ="cold_items")
 public class ColdItem {
+		
 		@Id
+		@GeneratedValue(strategy = GenerationType.IDENTITY)
+		@Column(name="id")
+		private int itemId;
 		@Column(length=500, nullable=false, name="item_name")
 		private String itemName;
 		@Column(length=500, nullable=false, name="item_cost")

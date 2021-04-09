@@ -7,7 +7,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.ColumnDefault;
@@ -16,28 +18,31 @@ import org.hibernate.annotations.ColumnDefault;
 @Table(name ="items")
 public class Item {
 		@Id
-		@Column(length=500, nullable=false, name="item_name", unique= true)
+		@GeneratedValue(strategy = GenerationType.IDENTITY)
+		@Column(name="id")
+		private int itemId;
+		@Column(length=500, nullable=false, name="name")
 		private String itemName;
-		@Column(length=500, nullable=false, name="item_cost")
+		@Column(length=500, nullable=false, name="cost")
 		private String itemCost;
-		@Column(length=500, nullable=false, name="description")
+		@Column(length=500, nullable=false)
 		private String description;
-		@Column(length=500, nullable=false, name="item_url")
+		@Column(length=500, nullable=false ,name= "url")
 		private String itemUrl;
+		@Column(length=500, nullable= false, name= "type")
+		private String type_of_time;
 		
-		 @ManyToOne(fetch = FetchType.LAZY)
-		    @JoinColumn(name = "order_id", nullable = false)
-		 private Order order;
-		
+		@ManyToOne
+		@JoinColumn(name = "orders")
+		private Order order;
 		 
 		public Item() {
 			super();
 		}
-		
-		
 
 		public Item(int itemId, String itemName, String itemCost, String description, String itemUrl, Order order) {
 			super();
+			this.itemId = itemId;
 			this.itemName = itemName;
 			this.itemCost = itemCost;
 			this.description = description;
@@ -45,53 +50,45 @@ public class Item {
 			this.order = order;
 		}
 
+		public int getItemId() {
+			return itemId;
+		}
+
+		public void setItemId(int itemId) {
+			this.itemId = itemId;
+		}
+
 		public String getItemName() {
 			return itemName;
 		}
-
-
 
 		public void setItemName(String itemName) {
 			this.itemName = itemName;
 		}
 
-
-
 		public String getItemCost() {
 			return itemCost;
 		}
-
-
 
 		public void setItemCost(String itemCost) {
 			this.itemCost = itemCost;
 		}
 
-
-
 		public String getDescription() {
 			return description;
 		}
-
-
 
 		public void setDescription(String description) {
 			this.description = description;
 		}
 
-
-
 		public String getItemUrl() {
 			return itemUrl;
 		}
 
-
-
 		public void setItemUrl(String itemUrl) {
 			this.itemUrl = itemUrl;
 		}
-
-
 
 		public Order getOrder() {
 			return order;
@@ -101,13 +98,10 @@ public class Item {
 			this.order = order;
 		}
 
-
-
 		@Override
 		public String toString() {
-			return "Item [itemName=" + itemName + ", itemCost=" + itemCost + ", description=" + description
-					+ ", itemUrl=" + itemUrl + ", order=" + order + "]";
+			return "Item [itemId=" + itemId + ", itemName=" + itemName + ", itemCost=" + itemCost + ", description="
+					+ description + ", itemUrl=" + itemUrl + ", order=" + order + "]";
 		}
-
 		
 }
