@@ -34,5 +34,10 @@ public class ItemController {
 		modelMap.put("items", itemService.findByType("frozen"));
 		return "colddrinks";
 	}
+	@GetMapping("merchandise")
+	public String merchandise(ModelMap modelMap) {
+		modelMap.put("items", itemService.findByType("merch"));
+		return "merchandise";
+	}
 
 }
