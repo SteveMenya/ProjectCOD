@@ -33,10 +33,10 @@ public class HomeController {
 	public String showMenu() {
 		return "menu";
 	}
-	@GetMapping("/merchandise")
-	public String showAboutPage() {
-		return "merchandise";
-	}
+	/*
+	 * @GetMapping("/merchandise") public String showAboutPage() { return
+	 * "merchandise"; }
+	 */
 
 	/*
 	 * @GetMapping("/contact-us") public String showContactUsPage() { return
