@@ -30,7 +30,7 @@ public class Item {
 		@Column(length=500, nullable=false ,name= "url")
 		private String itemUrl;
 		@Column(length=500, nullable= false, name= "type")
-		private String type_of_time;
+		private String type;
 		
 		@ManyToOne
 		@JoinColumn(name = "orders")
@@ -40,13 +40,15 @@ public class Item {
 			super();
 		}
 
-		public Item(int itemId, String itemName, String itemCost, String description, String itemUrl, Order order) {
+		public Item(int itemId, String itemName, String itemCost, String description, String itemUrl, String type,
+				Order order) {
 			super();
 			this.itemId = itemId;
 			this.itemName = itemName;
 			this.itemCost = itemCost;
 			this.description = description;
 			this.itemUrl = itemUrl;
+			this.type = type;
 			this.order = order;
 		}
 
@@ -90,6 +92,14 @@ public class Item {
 			this.itemUrl = itemUrl;
 		}
 
+		public String getType() {
+			return type;
+		}
+
+		public void setType(String type) {
+			this.type = type;
+		}
+
 		public Order getOrder() {
 			return order;
 		}
@@ -101,7 +111,8 @@ public class Item {
 		@Override
 		public String toString() {
 			return "Item [itemId=" + itemId + ", itemName=" + itemName + ", itemCost=" + itemCost + ", description="
-					+ description + ", itemUrl=" + itemUrl + ", order=" + order + "]";
+					+ description + ", itemUrl=" + itemUrl + ", type=" + type + ", order=" + order + "]";
 		}
 		
+
 }
