@@ -1,5 +1,7 @@
 package com.projectcod.controllers;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -13,16 +15,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.projectcod.models.Customer;
+import com.projectcod.models.Item;
 import com.projectcod.service.CustomerService;
+import com.projectcod.service.ItemService;
 
 
 @Controller
 public class HomeController {
 	private CustomerService customerService;
+	private ItemService itemService;
 	
 	@Autowired
-	public HomeController(CustomerService customerService) {
+	public HomeController(CustomerService customerService, ItemService itemService) {
 		this.customerService = customerService;
+		this.itemService = itemService;
 	}
 	@GetMapping("/")
 	public String showIndexPage() {
@@ -64,6 +70,7 @@ public class HomeController {
 		
 		if(customer != null && password.equals(customer.getPassword())) {
 			session.setAttribute("currentCustomer", customer); //dispays username
+			session.setAttribute("currentOrder", new ArrayList<Item>());
 			 //session.setAttribute("currentCustomer", customer.displayCustomerOrders());
 			return "welcome";	
 			
@@ -75,9 +82,20 @@ public class HomeController {
 		}
 		
 	}
-	@GetMapping("/welcome")
-	public String showWelcomePage() {
-		return "welcome";
+	@GetMapping("/addToOrder")
+	public String addToOrder(@RequestParam("itemId") Integer itemId, HttpSession session ) {
+		
+	
+		Item item = itemService.findById(itemId).get();
+		((ArrayList<Item>) session.getAttribute("currentOrder")).add(item);
+		return "redirect:/featured";
+		
 	}
-
 }
+	/*
+	 * @GetMapping("/welcome") public String showWelcomePage(Model model) { Customer
+	 * currentCustomer = new Customer(); model.addAttribute("customer",
+	 * currentCustomer); return "welcome"; }
+	 */
+
+
