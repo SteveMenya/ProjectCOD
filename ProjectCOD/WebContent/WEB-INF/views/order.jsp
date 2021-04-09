@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<form:form action="./contact-us" method="post" modelAttribute="feedback">
+<form:form action="./" method="post" modelAttribute="">
 		<div>
 			<label>First Name: </label>
 			<form:input path="firstName" /><br>

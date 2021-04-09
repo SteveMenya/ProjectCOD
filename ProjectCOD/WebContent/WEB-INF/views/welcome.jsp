@@ -14,41 +14,8 @@
 <body>
 <%@ include file="navigation_bar.html" %>
 		<h1>Welcome ${currentCustomer.firstName}</h1>
-		
-		
-	<h1>Place Order here</h1>
- 	<%-- <form:form action="./welcome" method="post" modelAttribute="customer">
-		<div>
-			<label>Email: </label>
-			<form:input path="email" /><br>
-			<p><form:errors path="email"/></p>
-		</div>
-		<div>
-			<label>First Name: </label>
-			<form:input path="firstName" /><br>
-			<p><form:errors path="firstName" /></p>
-		</div>
-		<div>
-			<label>Last Name: </label>
-			<form:input path="lastName" /><br>
-			<p><form:errors path="lastName" /></p>
-		</div>
-		<div>
-			<label>Password: </label>
-			<form:input path="password" /><br>
-			<p><form:errors path="password" /></p>
-		</div>
-		<div>
-			<label>PhoneNumber </label>
-			<form:input path="phoneNumber" /><br>
-			<p><form:errors path="phoneNumber" /></p>
-		</div>
-		<div>
-			<input type="submit" value="Register" />
-		</div>
-	
-	
-	</form:form>  --%>
+
+
 		
 </body>
 </html>

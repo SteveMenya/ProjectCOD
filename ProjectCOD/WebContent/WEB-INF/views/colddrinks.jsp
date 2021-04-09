@@ -24,9 +24,11 @@
 					<li><h3>${item.itemName}</h3></li>
 					<li><strong>${item.itemCost}</strong></li>
 					<li><p>${item.description}</p></li>
+					<li><a href="./addToOrder?itemId=${item.itemId}">Add Item</a></li>
 				</ul>							
 			</div>
 		</div>
+		
 		</c:forEach>
 	</div>	
 	
