@@ -5,12 +5,13 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-
 import com.projectcod.models.Item;
 
 public interface ItemRepository extends CrudRepository<Item,String> {
 	public Item findByItemName(String  itemName);
-	//public List<Item>  findAll();
+	
+	//finds items by type column
+	public List<Item> findByType(String type);
 	
 	public Iterable<Item> findAll();
 	
