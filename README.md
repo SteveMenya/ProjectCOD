@@ -1,4 +1,4 @@
-# ProjectCOD: Project Status - Active
+# ProjectCOD - Project Status: Active
 Welcome to my Tek Systems/ Optum Case Study. Also Known as project Coffee On Demand.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                             Inspiration for this project:
