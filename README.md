@@ -29,11 +29,11 @@ As an admin I want to be able to easily showcase the monthly drink specials, bec
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
                              Technologies Used
-Using Spring MVC for this project.
-Models/ Entities - customer, order, item, customer feedback.
-Controllers - home controller, item controller, customer feedback controller
-Relational Database - one customer to many orders, one order to many items, customer feedback.
-HTML, CSS, JAVASCRIPT & JAVA
+1. Using Spring MVC for this project.
+2. Models/ Entities - customer, order, item, customer feedback.
+3. Controllers - home controller, item controller, customer feedback controller
+4. Relational Database - one customer to many orders, one order to many items, customer feedback.
+5. HTML, CSS, JAVASCRIPT & JAVA
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
