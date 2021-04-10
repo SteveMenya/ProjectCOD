@@ -19,9 +19,8 @@ This is my first foray into programming. I thought I had an idea of what the boo
 
                               User Stories
 As a customer I would like to be able send feedback to the cafe manager and make fun suggestions for monthly drink specials
-As a customer I want to be able to get promotions and special announcements.
 As an employee I want customers to know what drinks are available before they get to the counter. This will help move the line faster between services.
-As an admin I want the app to match the church's color scheme
-As an admin I would like to collect customer/member data, so we can 
-As an admin I want to be able to target loyal cafe customers with coupons.
-
+As an admin I want the app to match the church's color scheme, so everything flows together
+As an admin I would like to collect customer/member data, so we can send out promotions and advertise the cafe
+As an admin I want to be able to target loyal cafe customers with coupons, to reward them for their frequent patronage.
+As an admin I want to be able to easily showcase the monthly drink specials, because we have customers who really look forward to them
