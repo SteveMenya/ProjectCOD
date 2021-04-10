@@ -1,4 +1,5 @@
 # ProjectCOD
+Project Status: Active
 Welcome to my Tek Systems/ Optum Case Study. Also Known as project Coffee On Demand.
 
 
@@ -24,3 +25,17 @@ As an admin I want the app to match the church's color scheme, so everything flo
 As an admin I would like to collect customer/member data, so we can send out promotions and advertise the cafe
 As an admin I want to be able to target loyal cafe customers with coupons, to reward them for their frequent patronage.
 As an admin I want to be able to easily showcase the monthly drink specials, because we have customers who really look forward to them
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                             Technologies Used
+Using Spring MVC for this project.
+Models/ Entities - customer, order, item, customer feedback.
+Controllers - home controller, item controller, customer feedback controller
+Relational Database - one customer to many orders, one order to many items, customer feedback.
+HTML, CSS, JAVASCRIPT & JAVA
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
