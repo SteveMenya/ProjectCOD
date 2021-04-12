@@ -38,6 +38,6 @@ This is my first foray into programming. I thought I had an idea of what the boo
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
                             Challenges Faced
  1. Solidified my JAVASCRIPT, JAVA, HTML & CSS syntax.
- 2. I was able to fix a bug where using email as the primary key was not the best approach. So after doing some research I found a better approach was to use an auto generated int as a primary key.
- 3.  Database Relationship/ Connectivity. I had trouble creating the connections between tables and reached out to my classmates for help and Carlos reached back and explained graphically how to set up the connectivity. 
+ 2. I was able to fix a bug where using email as the primary key was not the best approach. After doing some research I found the better approach was to use an auto generated int as a primary key.
+ 3.  Database Relationship/ Connectivity. I had trouble creating the connections between tables and reached out to my classmates for help and Carlos reached back and  graphically explained how to set up the connectivity. 
  4.  Displaying items in the front end. I was having problems with displaying my item images. I did some research and reached out to the instructional team and got the solution to use image urls and display them using jsp 
